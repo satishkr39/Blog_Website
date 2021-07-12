@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+</head>
+<body>
+  {% block content %}
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      {{ form.email.label }} {{ form.email }}<br>
+      {{ form.password.label }} {{ form.password }}
+      <br>
+      {{ form.submit }}
+    </form>
+  {% endblock %}
+</body>
+</html>

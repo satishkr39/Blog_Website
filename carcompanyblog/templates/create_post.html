@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post</title>
+</head>
+<body>
+
+    {% block content %}
+        <form method="POST">
+      <div class="container">
+          <form class="form-group">
+      {{ form.hidden_tag() }}
+      {{ form.title.label }} {{ form.title }}
+      <br>
+      {{ form.text.label }} {{ form.text }}
+      <br>
+      {{ form.submit(class='btn btn-outline-info') }}
+    {% endblock %}
+      </form>
+      </div>
+
+</body>
+</html>
